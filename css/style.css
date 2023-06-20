@@ -183,8 +183,152 @@ nav{
     width: 100%;
     height: 502px;
 }
-
-.news{
+.news {
     width: 100%;
-    height: 647px;
+    height: 502px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
+
+.image-news {
+    padding: 10px;
+    position: relative;
+}
+
+.caption::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #BF0F0F;
+    transition: .4s;
+}
+
+.image-news:hover > .caption::after{
+    width: 400px;
+}
+
+.image-news img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption{
+    margin-top: 26px;
+    font-family: Roboto;
+    text-transform: uppercase;
+}
+
+.custom-hr {
+    width: 50px;
+    height: 2px;
+    background-color: #BF0F0F;
+    border: none;
+    float: left;
+    margin-top: 11px;
+    position: relative;
+}
+
+.brojkama {
+    width: 100%;
+    height: 502px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.brojkama p {
+    font-family: Roboto;
+    font-size: 42px;
+}
+
+.brojkama a{
+    font-size: 28px;
+    font-family: Inter;
+}
+
+.brojkama2 {
+    position: relative;
+}
+
+.brojkama2 img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.brojkama2 .caption-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+}
+
+.brojkama2 .caption-1,
+.brojkama2 .caption-2,
+.brojkama2 .caption-3,
+.brojkama2 .caption-4 {
+    flex: 1;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.brojkama2 .caption-1{
+    font-size: 46px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.brojkama2 .caption-2{
+    font-size: 46px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+.brojkama2 .caption-3{
+    font-size: 46px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+.brojkama2 .caption-4{
+    font-size: 46px;
+}
+
+.proizvodi{
+    width: 100%;
+    height: 900px;
+    background-color: #F4F4F4;
+    text-align: center;
+}
+
+
+.proizvodi h1{
+    margin: 0;
+    padding-top: 139px;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.hr-porizvodi{
+    margin-top: 60px;
+    width: 524px;
+    height: 3px;
+    background-color: rgba(196, 196, 196, 0.4);
+    border: 0;
+    margin-bottom: 60px;
+}
+
+
+
+
+
+
+
+
