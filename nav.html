@@ -7,13 +7,88 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SzakmaiGyak</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+    <style>
+        .my-swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .my-swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .my-swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #ffffff;
+            border: 1px solid black;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #BF0F0F;
+        }
+
+    </style>
+
+
+
 </head>
 <body>
+<!--POP UP-->
+<div id="popup-overlay" onclick="closePopup()"></div>
+<div id="popup-content">
+    <button id="close-button">X</button>
+</div>
+
+<script>
+    function showPopup() {
+        var popupOverlay = document.getElementById("popup-overlay");
+        var popupContent = document.getElementById("popup-content");
+
+        popupOverlay.style.display = "block";
+        popupContent.style.display = "block";
+
+        document.body.style.overflow = "hidden";
+    }
+
+    window.addEventListener("load", showPopup);
+
+    function closePopup() {
+        var popupOverlay = document.getElementById("popup-overlay");
+        var popupContent = document.getElementById("popup-content");
+
+        popupOverlay.style.display = "none";
+        popupContent.style.display = "none";
+
+        document.body.style.overflow = "auto";
+    }
+
+    var closeButton = document.getElementById("close-button");
+    closeButton.addEventListener("click", closePopup);
+</script>
+<!--POP UP-->
+
+
+
 <!--NAV START-->
 <nav>
     <div class="nav-full">
         <div class="nav-left">
             <img src="img/logo.png">
+            <div class="darklight">
+            <img  id="dark-icon" src="img/moon.png" style="width: 20px; height: 20px;" onclick="toggleDarkLightMode()">
+            <img  id="light-icon" src="img/sun.png" style="width: 20px; height: 20px;" onclick="toggleDarkLightMode()">
+            </div>
         </div>
         <div class="nav-right">
             <a style=" text-decoration: underline #595959; cursor:pointer;">Magyar</a>
@@ -22,7 +97,29 @@
         </div>
     </div>
 </nav>
+
+<script>
+    function toggleDarkLightMode() {
+        var body = document.body;
+        var darkIcon = document.getElementById("dark-icon");
+        var lightIcon = document.getElementById("light-icon");
+
+        if (body.classList.contains("dark-mode")) {
+            body.classList.remove("dark-mode");
+            body.classList.add("light-mode");
+            darkIcon.style.display = "none";
+            lightIcon.style.display = "block";
+        } else {
+            body.classList.remove("light-mode");
+            body.classList.add("dark-mode");
+            lightIcon.style.display = "none";
+            darkIcon.style.display = "block";
+        }
+    }
+</script>
 <!--NAV END-->
+
+
 
 <!--UNDER NAV START-->
 <div class="under-nav">
@@ -59,11 +156,45 @@
 </div>
 <!--UNDER NAV  END-->
 
+
 <!--IMAGE  START-->
-<div class="video-image">
-    <img src="img/Video.jpg">
+
+<div class="swiper my-swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide my-swiper-slide"><img src="img/rafael-de-nadai-b0eg-PYGICQ-unsplash.jpg" style="margin: 0"></div>
+        <div class="swiper-slide my-swiper-slide"><img src="img/rafael-de-nadai-b0eg-PYGICQ-unsplash.jpg" style="margin: 0"></div>
+
+    </div>
+    <div class="swiper-button-next bottom-right" style="color: #BF0F0F;"></div>
+    <div class="swiper-button-prev" style="color: #BF0F0F;"></div>
+    <div class="swiper-pagination"></div>
 </div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".my-swiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
 <!--IMAGE  END-->
+
 
 <!--INTRODUCTION  START-->
 <div class="introduction-full">
@@ -143,7 +274,182 @@
     <h1>Naši proizvodi</h1>
     <hr class="hr-porizvodi">
     <p style="font-family: Roboto; font-size: 14px; margin-bottom: 60px;">Naše proizvode DVG Cosmetics odlikuje visok kvalitet kojim se dobija kompletna<br> nega lica I tela. Uspeli smo da uskladimo kvalitet i cenu, što su prepoznali i našI <br>kupci.</p>
+    <div class="proizvodi-div-cards">
+    </div>
 </div>
+
+<!--Swiper DIV-->
+<div class="swiper-cards">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/undefined%20-%20Imgur.png">
+                <div class="cardText"><p>Postanite naš partner</p></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/undefined%20-%20Imgur.png">
+                <div class="cardText"><p>Postanite naš partner</p></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/undefined%20-%20Imgur.png">
+                <div class="cardText"><p>Postanite naš partner</p></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/undefined%20-%20Imgur.png">
+                <div class="cardText"><p>Postanite naš partner</p></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/undefined%20-%20Imgur.png">
+                <div class="cardText"><p>Postanite naš partner</p></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/undefined%20-%20Imgur.png">
+                <div class="cardText"><p>Postanite naš partner</p></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            breakpoints: {
+                "@0.00": {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                "@0.75": {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                "@1.00": {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                "@1.50": {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+                "@2.00": {
+                    slidesPerView: 5,
+                    spaceBetween: 60,
+                },
+            },
+        });
+    </script>
+    <img class="img-brand" src="img/Group%20105.png">
+</div>
+
+<!--Swiper DIV END-->
 <!--PROIZVODI  END-->
+
+<!--BREND DIV START-->
+<div class="brand">
+    <div class="brand-text">
+        <h4>Istaknuti brendovi za koje radimo <br> distribuciju</h4>
+        <hr>
+    </div>
+    <div class="brand-product">
+        <div class="product">
+            <div class="product-image">
+                <img src="img/Dove.png">
+            </div>
+            <div class="product-text">
+                <a>Dove</a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-image">
+                <img src="img/Nivea.png">
+            </div>
+            <div class="product-text">
+                <a>Nivea</a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-image">
+                <img src="img/Palmolive.png">
+            </div>
+            <div class="product-text">
+                <a>Palmolive</a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-image">
+                <img src="img/Vanish.png">
+            </div>
+            <div class="product-text">
+                <a>Vanish</a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-image">
+                <img src="img/Ajax.png">
+            </div>
+            <div class="product-text">
+                <a>Ajax</a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-image">
+                <img src="img/Cif.png">
+            </div>
+            <div class="product-text">
+                <a>Cif</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="brand-button">
+        <input type="button" value="Svi brendovi u našem portfoliju">
+    </div>
+</div>
+
+<!--BREND DIV END-->
+
+<!--FOOTER DIV START-->
+<footer>
+    <div class="footer-divs">
+        <div class="footer-divs-text-image">
+            <img src="img/Frame.png">
+        </div>
+        <div class="footer-divs-text">
+           <h2>D.V.G COMPANY</h2><br>
+            <div class="image-with-text">
+                <img src="img/Icon%201.png" alt="Icon 1">
+                <p>Čantavirski put bb <br> 24000 Subotica, Srbija</p>
+            </div>
+
+            <div class="image-with-text">
+                <img src="img/Icon%202.png" alt="Icon 2">
+                <p>+381 24 568 555</p>
+            </div>
+
+            <div class="image-with-text">
+                <img src="img/Icon%203.png" alt="Icon 3">
+                <p>office@dvgcomapny.com</p>
+            </div>
+        </div>
+        <div class="footer-divs-text">
+                <h5>O NAMA</h5>
+                <h5>DVG PROIZVODI</h5>
+                <h5>BRENDOVI</h5>
+                <h5>SARADNJA</h5>
+                <h5>NOVOSTI</h5>
+                <h5>KONTAKT</h5>
+        </div>
+        <div class="footer-divs-text" style="border: 0">
+            <h6>Pratite Nas</h6>
+            <img class="img-footer" src="img/Face.png">
+            <img class="img-footer" src="img/Twitter.png">
+            <img class="img-footer" src="img/yt.png">
+            <img class="img-footer" src="img/Mess.png">
+
+        </div>
+    </div>
+</footer>
+<!--FOOTER DIV END-->
 </body>
 </html>

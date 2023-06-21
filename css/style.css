@@ -302,7 +302,7 @@ nav{
 
 .proizvodi{
     width: 100%;
-    height: 900px;
+    height: 360px;
     background-color: #F4F4F4;
     text-align: center;
 }
@@ -322,8 +322,324 @@ nav{
     height: 3px;
     background-color: rgba(196, 196, 196, 0.4);
     border: 0;
-    margin-bottom: 60px;
 }
+
+.swiper-cards{
+    width: 100%;
+    height: 550px;
+    background-color: #F4F4F4;
+    position: relative;
+}
+
+.swiper-cards .img-brand{
+    top: 455px;
+    left: 10px;
+    position: absolute;
+}
+
+/*Swiper Style*/
+
+.swiper {
+    width: 90%;
+    height: 60%;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.swiper-slide img{
+    max-width: 80%;
+    max-height: 60%;
+    margin-top: 15px;
+}
+
+.cardText {
+    position: relative;
+}
+
+.cardText::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #BF0F0F;
+    transition: .4s;
+    bottom: -5px;
+    left: 0;
+}
+
+.cardText p {
+    font-family: Roboto;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 35px;
+    overflow: hidden;
+}
+
+.cardText::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #BF0F0F;
+    transition: .4s;
+    bottom: -5px;
+    left:25px;
+    transform: translateX(0%);
+}
+
+.swiper-slide:hover > .cardText::after {
+    width: 178px;
+    transform: translateX(0%);
+}
+
+
+/*Swiper Style END*/
+
+
+
+.brand{
+    width: 100%;
+    height: 620px;
+}
+
+.brand-text{
+    width: 100%;
+    text-align: center;
+}
+
+.brand-text h4{
+    margin-top: 83px;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: normal;
+    font-family: Inter;
+    margin-bottom: 44px;
+}
+
+.brand-text hr{
+    width: 524px;
+    height: 3px;
+    border: 0;
+    background-color: rgba(196, 196, 196, 0.4);
+    margin-bottom: 85.87px;
+}
+
+.brand-product{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    justify-content: center;
+}
+
+.product{
+    width: 10%;
+    height: 100px;
+    margin: 0 15px 15px 15px;
+}
+
+.product-image{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-text{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 53px;
+}
+
+.product a{
+    font-family: Inter;
+    font-size: 18px;
+}
+
+.brand-button{
+    width: 100%;
+    height: 130px;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.brand-button input{
+    padding:16px;
+    border-radius: 4px;
+    border: 0;
+    background-color: #BF0F0F;
+    font-family: Roboto;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/White-fur-rug-texture-patternpictures-1313 1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-divs{
+    width: 90%;
+    height: 280px;
+    display: flex;
+}
+
+
+.footer-divs-text{
+    width: 25%;
+    height: 270px;
+    border-right: 1px solid white;
+
+}
+
+.footer-divs-text-image{
+    width: 25%;
+    height: 270px;
+    text-align: center;
+    border-right: 1px solid #ffffff;
+}
+
+.footer-divs-text{
+    color: white;
+}
+
+.footer-divs-text h2{
+    color: white;
+    margin: 0;
+    margin-left: 30px;
+    font-family: Inter;
+    font-size: 20px;
+}
+
+.image-with-text {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    padding-bottom: 55px;
+    padding-top: 13px;
+}
+
+.image-with-text img {
+    margin-right: 10px;
+}
+
+.image-with-text p {
+    margin: 0;
+    font-family: Roboto;
+    font-size: 14px;
+}
+
+.footer-divs-text h5{
+    color: white;
+    margin: 0;
+    margin-left: 30px;
+    font-family: "Roboto Thin";
+    font-size: 16px;
+    padding-bottom: 32px;
+    font-weight: normal;
+}
+
+.footer-divs-text h6{
+    margin: 0;
+    margin-left: 30px;
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: normal;
+}
+
+.img-footer{
+    width: 20px;
+    height: 20px;
+    margin-left: 22px;
+    padding-top: 19.25px;
+}
+
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Szürke átlátszó háttér */
+    z-index: 9999; /* Biztosítsd, hogy a popup ablak mindig előtérben legyen */
+}
+
+#popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    background-color: #ffffff;
+    border: 0px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+    z-index: 10000; /* Biztosítsd, hogy a popup ablak mindig előtérben legyen */
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid black;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.darklight{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.darklight img{
+    margin-top: 10px;
+}
+
+#dark-icon {
+    display: block;
+    cursor: pointer;
+}
+
+#light-icon {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 
 
