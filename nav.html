@@ -8,6 +8,8 @@
     <title>SzakmaiGyak</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 
 
     <style>
@@ -86,8 +88,8 @@
         <div class="nav-left">
             <img src="img/logo.png">
             <div class="darklight">
-            <img  id="dark-icon" src="img/moon.png" style="width: 20px; height: 20px;" onclick="toggleDarkLightMode()">
-            <img  id="light-icon" src="img/sun.png" style="width: 20px; height: 20px;" onclick="toggleDarkLightMode()">
+                <img id="dark-icon" src="img/moon.png" style="width: 20px; height: 20px;" onclick="toggleDarkLightMode()">
+                <img id="light-icon" src="img/sun.png" style="width: 20px; height: 20px; display: none;" onclick="toggleDarkLightMode()">
             </div>
         </div>
         <div class="nav-right">
@@ -107,15 +109,17 @@
         if (body.classList.contains("dark-mode")) {
             body.classList.remove("dark-mode");
             body.classList.add("light-mode");
-            darkIcon.style.display = "none";
-            lightIcon.style.display = "block";
+            lightIcon.style.display = "none";
+            darkIcon.style.display = "block";
         } else {
             body.classList.remove("light-mode");
             body.classList.add("dark-mode");
-            lightIcon.style.display = "none";
-            darkIcon.style.display = "block";
+            darkIcon.style.display = "none";
+            lightIcon.style.display = "block";
         }
     }
+
+
 </script>
 <!--NAV END-->
 
@@ -203,11 +207,11 @@
     </div>
     <div class="introduction-right">
         <div class="introduction-right-text">
-            <h1 style="color: #303030; font-size:42px; font-family: Roboto; ">DVG Company</h1>
+            <h1 >DVG Company</h1>
             <hr style="width: 137px; height: 6px; background-color: red; border: 0; float: left"><br>
-            <h4 style="font-family: Inter; font-size: 28px; font-weight: normal">Veleprodaja i maloprodaja kozmetike i kućne <br>hemije</h4>
+            <h4>Veleprodaja i maloprodaja kozmetike i kućne <br>hemije</h4>
             <hr style="width: 524px; height: 3px; background-color: #C4C4C4; border: 0; float: left"><br>
-            <h6 style="font-family: Roboto; font-weight: normal; font-size: 14px; color: #474747;">DVG Company d.o.o. je trgovinsko preduzeće osnovano 2008. godine u Subotici.
+            <h6>DVG Company d.o.o. je trgovinsko preduzeće osnovano 2008. godine u Subotici.
                 Prvenstvena delatnost kompanije je veleprodaja kozmetike i kućne hemije.
                 U potpunosti je u privatnom vlasništvu, sa sedištem u Subotici. Tu se nalazi distrubutivni centar i poslovne prostorije, sa ukupno 3000m2 magacinskog prostora koji zadovoljava sve segmente u pogledu smeštaja, čuvanja i plasiranja robe.</h6>
             <input type="button" value="Saznajte više o nama">
@@ -218,7 +222,6 @@
 
 <!--IMAGE2  START-->
 <div class="image-2">
-    <img src="img/Placeholder%20Alt..jpg">
 </div>
 <!--IMAGE2  END-->
 

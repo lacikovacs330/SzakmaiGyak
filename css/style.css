@@ -10,6 +10,8 @@ nav{
     justify-content: center;
 }
 
+
+
 .nav-full{
     width: 80%;
     height: 75px;
@@ -38,6 +40,8 @@ nav{
     font-family: "Roboto";
     color: #595959;
 }
+
+
 
 .under-nav{
     width: 100%;
@@ -128,7 +132,7 @@ nav{
 
 .introduction-full{
     width: 100%;
-    height: 644px;
+    height: 640px;
     display: flex;
     display: inline-block;
 }
@@ -159,6 +163,25 @@ nav{
     height: 504px;
 }
 
+.introduction-right-text h1{
+    color: #303030;
+    font-size:42px;
+    font-family: Roboto;
+}
+
+.introduction-right-text h4{
+    color: #303030;
+    font-size:28px;
+    font-family: Roboto;
+}
+
+.introduction-right-text h6{
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 14px;
+    color: #474747;
+}
+
 .introduction-right-text input{
     border-radius: 4px;
     border: 0px;
@@ -171,18 +194,6 @@ nav{
     font-size: 16px;
 }
 
-.image-2{
-    width: 100%;
-    height: 502px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-2 img {
-    width: 100%;
-    height: 502px;
-}
 .news {
     width: 100%;
     height: 502px;
@@ -368,13 +379,15 @@ nav{
 .cardText::after {
     content: "";
     position: absolute;
-    width: 50px;
+    width: calc(20%);
     height: 2px;
     background-color: #BF0F0F;
     transition: .4s;
     bottom: -5px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 
 .cardText p {
     font-family: Roboto;
@@ -384,20 +397,10 @@ nav{
     overflow: hidden;
 }
 
-.cardText::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 2px;
-    background-color: #BF0F0F;
-    transition: .4s;
-    bottom: -5px;
-    left:25px;
-    transform: translateX(0%);
-}
 
 .swiper-slide:hover > .cardText::after {
-    width: 178px;
+    width: 100%;
+    left: 0;
     transform: translateX(0%);
 }
 
@@ -417,12 +420,13 @@ nav{
 }
 
 .brand-text h4{
-    margin-top: 83px;
     font-size: 28px;
     text-decoration: none;
     font-weight: normal;
     font-family: Inter;
-    margin-bottom: 44px;
+    margin: 0;
+    padding-top: 83px;
+    padding-bottom: 30px;
 }
 
 .brand-text hr{
@@ -477,7 +481,7 @@ nav{
     width: 100%;
     height: 130px;
     text-align: center;
-    margin: 2rem auto;
+    padding-top: 10px;
 }
 
 .brand-button input{
@@ -635,8 +639,91 @@ footer{
     cursor: pointer;
 }
 
+.dark-mode .under-nav {
+    background-color: black;
+}
+
+.dark-mode .under-nav-all h3 {
+    color: white;
+}
+
+.dark-mode .under-nav-all a {
+    color: white;
+}
+
+.dark-mode .introduction-left {
+    background-color: black;
+}
+
+.dark-mode .introduction-right {
+    background-color: black;
+}
 
 
+.dark-mode .introduction-right-text h1{
+    color: #ffffff;
+}
+
+.dark-mode .introduction-right-text h4{
+    color: #ffffff;
+}
+
+.dark-mode .introduction-right-text h6{
+    color: #ffffff;
+}
+
+.dark-mode .introduction-full {
+    background-color: #000000;
+}
+
+.dark-mode .introduction-full {
+    background-color: #000000;
+}
+
+.dark-mode .news{
+    background-color: black;
+    color: #ffffff;
+    height: 507px;
+}
+
+.dark-mode .brojkama{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-mode .proizvodi{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-mode .swiper-cards{
+    background-color: #000000;
+    height: 556px;
+}
+
+.dark-mode .brand-text h4{
+    background-color: #000000;
+    color:  #ffffff;
+}
+
+.dark-mode .brand{
+    background-color: #000000;
+    color:  #ffffff;
+}
+
+
+.image-2 {
+    background-image: url("../img/Placeholder Alt..jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+
+/*RESZPONTIVITÁS*/
 
 
 
