@@ -85,7 +85,25 @@
 <!--NAV START-->
 <nav>
     <div class="nav-full">
+
         <div class="nav-left">
+            <div class="menu-container">
+                <div class="menu-header">
+                    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                </div>
+                <ul class="menu-list">
+                    <li><a style="cursor:pointer;">Srpski</a></li>
+                    <li><a style="cursor:pointer;">English</a></li>
+                    <li><a style="cursor:pointer;">Magyar</a></li>
+                    <li><a style="cursor:pointer;">O NAMA</a></li>
+                    <li><a style="cursor:pointer;">DVG PROIZVODI</a></li>
+                    <li><a style="cursor:pointer;">BRENDOVI</a></li>
+                    <li><a style="cursor:pointer;">DISTRIBUCIJA</a></li>
+                    <li><a style="cursor:pointer;">SARADNJA</a></li>
+                    <li><a style="cursor:pointer;">NOVOSTI</a></li>
+                    <li><a style="cursor:pointer;">KONTAKTI</a></li>
+                </ul>
+            </div>
             <img src="img/logo.png">
             <div class="darklight">
                 <img id="dark-icon" src="img/moon.png" style="width: 20px; height: 20px;" onclick="toggleDarkLightMode()">
@@ -99,6 +117,13 @@
         </div>
     </div>
 </nav>
+
+<script>
+    function toggleMenu() {
+        var menuList = document.querySelector('.menu-list');
+        menuList.classList.toggle('menu-open');
+    }
+</script>
 
 <script>
     function toggleDarkLightMode() {
@@ -158,6 +183,8 @@
         </div>
     </div>
 </div>
+
+
 <!--UNDER NAV  END-->
 
 
@@ -210,7 +237,7 @@
             <h1 >DVG Company</h1>
             <hr style="width: 137px; height: 6px; background-color: red; border: 0; float: left"><br>
             <h4>Veleprodaja i maloprodaja kozmetike i kućne <br>hemije</h4>
-            <hr style="width: 524px; height: 3px; background-color: #C4C4C4; border: 0; float: left"><br>
+            <hr class="hr-introduction"><br>
             <h6>DVG Company d.o.o. je trgovinsko preduzeće osnovano 2008. godine u Subotici.
                 Prvenstvena delatnost kompanije je veleprodaja kozmetike i kućne hemije.
                 U potpunosti je u privatnom vlasništvu, sa sedištem u Subotici. Tu se nalazi distrubutivni centar i poslovne prostorije, sa ukupno 3000m2 magacinskog prostora koji zadovoljava sve segmente u pogledu smeštaja, čuvanja i plasiranja robe.</h6>
@@ -263,10 +290,10 @@
 <div class="brojkama2">
     <img src="img/Rectangle%20140.jpg">
     <div class="caption-wrapper">
-        <div class="caption-1"><p style="margin-bottom: -6px"><b>3.000<a style="font-size: 18px">m<sup>2</sup></a></b></p><a style="font-size: 18px">Magacinskog prostora</a></div>
-        <div class="caption-2"><p style="margin-bottom: -6px"><b>20</b></p><a style="font-size: 18px">Vozila</a></div>
-        <div class="caption-3"><p style="margin-bottom: -6px"><b>8</b></p><a style="font-size: 18px">Komercijalista</a></div>
-        <div class="caption-4"><p style="margin-bottom: -6px"><b>70</b></p><a style="font-size: 18px">Brendova</a></div>
+        <div class="caption-1"><p style="margin-bottom: -6px"><b>3.000<a style="font-size: 18px">m<sup>2</sup></a></b></p><a>Magacinskog prostora</a></div>
+        <div class="caption-2"><p style="margin-bottom: -6px"><b>20</b></p><a>Vozila</a></div>
+        <div class="caption-3"><p style="margin-bottom: -6px"><b>8</b></p><a>Komercijalista</a></div>
+        <div class="caption-4"><p style="margin-bottom: -6px"><b>70</b></p><a>Brendova</a></div>
     </div>
 </div>
 <!--BROJKAMA2  END-->
@@ -352,7 +379,7 @@
 <div class="brand">
     <div class="brand-text">
         <h4>Istaknuti brendovi za koje radimo <br> distribuciju</h4>
-        <hr>
+        <hr class="hr-brand">
     </div>
     <div class="brand-product">
         <div class="product">
